@@ -49,7 +49,7 @@ class NvidiacgtoolkitbinariesConan(ConanFile):
 
 	def package_info(self):
 		if self.settings.os == "Linux":
-			self.cpp_info.libs = ["libCg.so", "libCgGL.so"]
+			self.cpp_info.libs = ["Cg", "CgGL"]
 			self.cpp_info.system_libs = ["dl", "m"]
 		elif self.settings.os == "Windows":
 			self.cpp_info.libs = ["cg", "cgD3D9", "cgD3D10", "cgD3D11", "cgGL", "glut32"]
